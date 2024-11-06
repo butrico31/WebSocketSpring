@@ -30,7 +30,7 @@ public class ConnectorConfig {
 
     private Connector getHttpConnector() {
         Connector connector = new Connector("org.apache.coyote.http11.Http11NioProtocol");
-        connector.setScheme("https");
+        connector.setScheme("http");
         connector.setPort(8080);
         connector.setSecure(false);
         connector.setRedirectPort(8443);

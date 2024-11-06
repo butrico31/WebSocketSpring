@@ -1,13 +1,29 @@
 package com.site.chatteste.config;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
+
 public class ObjMsg {
     private String user;
     private String msg;
+    
+    
+    
+    
+	public ObjMsg() {
+	}
+	
+	public ObjMsg(String user, String msg) {
+		this.user = user;
+		this.msg = msg;
+	}
+	public String getUser() {
+		return user;
+	}
+	public void setUser(String user) {
+		this.user = user;
+	}
+	public String getMsg() {
+		return msg;
+	}
+	public void setMsg(String msg) {
+		this.msg = msg;
+	}
 }

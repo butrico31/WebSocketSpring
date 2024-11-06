@@ -30,6 +30,8 @@ function sendMessage(e) {
         user: sessionStorage.getItem("user"),
         msg: messageInput
     };
+	
+	
 
     Client.send("/app/chatMessage", {}, JSON.stringify(message));
 
