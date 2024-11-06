@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>3.1.2</version>
-		<relativePath /> <!-- lookup parent from repository -->
+		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.site</groupId>
 	<artifactId>chatteste</artifactId>
@@ -15,8 +14,6 @@
 	<name>chatteste</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
-		<configuration-sslProtocol>TLS</configuration-sslProtocol>
-		<configuration-ssl>false</configuration-ssl>
 		<java.version>17</java.version>
 	</properties>
 	<dependencies>
@@ -35,11 +32,6 @@
 			<scope>runtime</scope>
 			<optional>true</optional>
 		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-tomcat</artifactId>
-		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -50,16 +42,16 @@
 	<build>
 		<plugins>
 			<plugin>
-				<groupId>org.apache.tomcat.maven</groupId>
-				<artifactId>tomcat7-maven-plugin</artifactId>
-				<version>2.2</version>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
-					<port>8443</port>
-					<ssl>${configuration-ssl}</ssl>
-					<sslProtocol>TLS</sslProtocol>
-					<keystoreFile>path/to/keystore</keystoreFile>
-					<keystorePass>password</keystorePass>
-					<secure>false</secure> <!-- Desativa a segurança -->
+					<excludes>
+						<exclude>
+							<groupId>org.projectlombok</groupId>
+							<artifactId>lombok</artifactId>
+						</exclude>
+					</excludes>
+					
 				</configuration>
 			</plugin>
 		</plugins>
