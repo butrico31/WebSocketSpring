@@ -15,6 +15,8 @@
 	<name>chatteste</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
+		<configuration-sslProtocol>TLS</configuration-sslProtocol>
+		<configuration-ssl>false</configuration-ssl>
 		<java.version>17</java.version>
 	</properties>
 	<dependencies>
@@ -33,11 +35,7 @@
 			<scope>runtime</scope>
 			<optional>true</optional>
 		</dependency>
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<optional>true</optional>
-		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-tomcat</artifactId>
@@ -52,16 +50,16 @@
 	<build>
 		<plugins>
 			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat7-maven-plugin</artifactId>
+				<version>2.2</version>
 				<configuration>
-					<excludes>
-						<exclude>
-							<groupId>org.projectlombok</groupId>
-							<artifactId>lombok</artifactId>
-						</exclude>
-					</excludes>
-
+					<port>8443</port>
+					<ssl>${configuration-ssl}</ssl>
+					<sslProtocol>TLS</sslProtocol>
+					<keystoreFile>path/to/keystore</keystoreFile>
+					<keystorePass>password</keystorePass>
+					<secure>false</secure> <!-- Desativa a segurança -->
 				</configuration>
 			</plugin>
 		</plugins>

@@ -1,7 +1,6 @@
 package com.site.chatteste.config;
 
 import org.apache.catalina.Context;
-import org.apache.catalina.connector.Connector;
 import org.apache.tomcat.util.descriptor.web.SecurityCollection;
 import org.apache.tomcat.util.descriptor.web.SecurityConstraint;
 import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory;
@@ -24,6 +23,7 @@ public class ConnectorConfig {
                 context.addConstraint(securityConstraint);
             }
         };
+        
         tomcat.addConnectorCustomizers(conn -> conn.setSecure(false));
         return tomcat;
     }

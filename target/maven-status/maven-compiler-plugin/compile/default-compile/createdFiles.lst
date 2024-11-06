@@ -1,0 +1,6 @@
+com\site\chatteste\ChattesteApplication.class
+com\site\chatteste\config\WebSocket.class
+com\site\chatteste\config\ConnectorConfig$1.class
+com\site\chatteste\config\ObjMsg.class
+com\site\chatteste\config\ConnectorConfig.class
+com\site\chatteste\App.class
