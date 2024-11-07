@@ -9,10 +9,10 @@ import com.site.chatteste.config.ObjMsg;
 @Controller
 public class App {
 
-    @MessageMapping("/chatMessage")
-    @SendTo("/canal")
-    public ObjMsg sendMessage(ObjMsg message){
-        return message;
-    }
+	@MessageMapping("/chatMessage")
+	@SendTo("/canal")
+	public ObjMsg sendMessage(ObjMsg message) {
+		return message;
+	}
 
 }
