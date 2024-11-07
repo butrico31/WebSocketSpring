@@ -1,5 +1,5 @@
 
-const socket = new WebSocket('wss://localhost:8443/conect');
+const socket = new WebSocket('wss://springwebsocket-production.up.railway.app/conect');
 const Client = Stomp.over(socket);
 
 
