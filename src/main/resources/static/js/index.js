@@ -1,5 +1,5 @@
 
-const socket = new WebSocket('wss://localhost:8443/conect');
+const socket = new WebSocket('wss://websocket-production:8443/conect');
 const Client = Stomp.over(socket);
 
 
